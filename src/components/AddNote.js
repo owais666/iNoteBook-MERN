@@ -20,16 +20,16 @@ function AddNote(props) {
   };
 
   return (
-    <div className="container my-4">
-      <h2>Add Notes</h2>
-      <form className="my-3">
+    <div className="container-fluid pt-4 my-4 border border border-black border-opacity-25 rounded shadow-lg">
+      <h2 className="text-center border-bottom border-opacity-25 pb-3">Add Notes</h2>
+      <form className="my-3 ">
         <div className="mb-3">
-          <label htmlFor="title" className="form-label">
+          <label htmlFor="title" className="form-label mx-2">
             Title
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shadow-sm"
             id="title"
             name="title"
             aria-describedby="emailHelp"
@@ -37,32 +37,32 @@ function AddNote(props) {
             minLength={5}
             required
             value={note.title}
-            placeholder="must be 5 characters"
+            placeholder="must be 5 or more characters"
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="description" className="form-label">
+          <label htmlFor="description" className="form-label mx-2">
             Description
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shadow-sm"
             id="description"
             name="description"
             onChange={onChange}
             minLength={5}
             required
             value={note.description}
-            placeholder="must be 5 characters"
+            placeholder="must be 5 or more characters"
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="tag" className="form-label">
+          <label htmlFor="tag" className="form-label mx-2">
             Tag
           </label>
           <input
             type="text"
-            className="form-control"
+            className="form-control shadow-sm"
             id="tag"
             name="tag"
             onChange={onChange}
@@ -73,14 +73,14 @@ function AddNote(props) {
         </div>
         <button
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-outline-dark my-3 shadow-lg mx-3"
           onClick={handleClick}
           disabled={
             note.title.length < 5 ||
             note.description.length < 5
           }
         >
-          Add Note
+          <i className="fa-solid fa-plus"></i>  Add Note
         </button>
       </form>
     </div>

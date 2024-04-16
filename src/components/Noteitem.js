@@ -9,10 +9,10 @@ function Noteitem(props) {
   const { deleteNote } = context;
 
   return (
-    <div className="col-md-3">
+    <div className="col-md-3 ">
       {/* {note.title}
       {note.description} */}
-      <div className="card my-3">
+      <div className="card my-3 shadow">
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <h5 className="card-title">{note.title}</h5>

@@ -11,10 +11,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar shadow-lg navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            iNoteBook
+          <i className="fa-solid fa-exclamation"></i> NoteBook
           </Link>
           <button
             className="navbar-toggler"
@@ -37,7 +37,7 @@ const Navbar = () => {
                   aria-current="page"
                   to="/"
                 >
-                  Home
+                 <i className="fa-solid fa-house"></i>&nbsp;Home
                 </Link>
               </li>
               <li className="nav-item">
@@ -47,23 +47,23 @@ const Navbar = () => {
                   }`}
                   to="/about"
                 >
-                  About
+                  <i className="fa-solid fa-address-card"></i>&nbsp;About
                 </Link>
               </li>
             </ul>
             {!localStorage.getItem("token") ? (
               <form className="d-flex">
                 <Link className="btn btn-dark mx-1" to="/login" role="button">
-                  Login
+                <i className="fa-solid fa-user"></i>&nbsp;   Login
                 </Link>
 
-                <Link className="btn btn-dark mx-1" to="/signup" role="button">
-                  Sign up
+                <Link className="btn btn-dark mx-2 " to="/signup" role="button">
+                  <i className="fa-solid fa-user-plus"></i>&nbsp;  Sign up
                 </Link>
               </form>
             ) : (
               <button className="btn btn-dark" onClick={handleLogout}>
-                Logout
+                <i className="fa-solid fa-power-off"></i>&nbsp;     Logout
               </button>
             )}
           </div>

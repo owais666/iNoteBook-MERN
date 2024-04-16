@@ -37,15 +37,18 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <div className="container-fluid pt-4 my-4 border border border-black border-opacity-25 rounded shadow-lg">
+      <h2 className="text-center border-bottom border-opacity-25 pb-3">
+        Login Page
+      </h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
+        <div className="mb-3 mt-4">
+          <label htmlFor="email" className="form-label mx-2">
             Email address
           </label>
           <input
             type="email"
-            className="form-control"
+            className="form-control shadow-sm "
             id="email"
             name="email"
             aria-describedby="emailHelp"
@@ -53,22 +56,28 @@ const Login = (props) => {
             onChange={onChange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
+        <div className="mb-3 mt-4 ">
+          <label htmlFor="password" className="form-label mx-2">
             Password
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-control shadow-sm mb-4"
             id="password"
             name="password"
             value={credentials.password}
             onChange={onChange}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <div className="d-grid gap-2 d-md-flex justify-content-md-center border-top  ">
+          <button
+            type="submit"
+            className="btn btn-outline-dark my-5 shadow-lg"
+          >
+
+            Continue     <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          </button>
+        </div>
       </form>
     </div>
   );
