@@ -75,7 +75,7 @@ const Login = (props) => {
             className="btn btn-outline-dark my-5 shadow-lg"
           >
 
-            Continue     <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            Continue     <i className="fa-solid fa-arrow-right-to-bracket"></i>
           </button>
         </div>
       </form>
